@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0.0" package="cn.opda.android.softwarelock"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="4" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <meta-data android:name="UMENG_APPKEY" android:value="4d9d91d4112cf75dea000011" />
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="cn.opda.android.Activity.FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.opda.android.Activity.NewPassActivity" />
+        <activity android:name="cn.opda.android.Activity.NewPassActivity2" />
+        <activity android:name="cn.opda.android.Activity.LoginActivity" />
+        <activity android:name="cn.opda.android.Activity.LoginAppActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.opda.android.Activity.MainActivity" />
+        <activity android:name="cn.opda.android.Activity.ChangePassActivity" />
+        <activity android:name="cn.opda.android.Activity.ChangePassActivity2" />
+        <activity android:theme="@android:style/Theme.Dialog" android:name="cn.opda.android.Activity.PassSelectPre" />
+        <activity android:name="cn.opda.android.ninekeylock.ChooseLockPattern" />
+        <activity android:name="com.google.ads.AdActivity" />
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="cn.opda.android.Activity.AskDialogActivity" />
+        <service android:name="cn.opda.android.Service.LockAppSevice" />
+        <receiver android:label="???" android:icon="@drawable/icon" android:name="cn.opda.android.Activity.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="cn.opda.widget.CHANGE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_provider" />
+        </receiver>
+        <receiver android:name="cn.opda.android.Activity.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
+    </application>
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />	" />
+</manifest>
